@@ -7,7 +7,11 @@ from neo_api_client import NeoAPI
 # Welcome to Streamlit!
 
 """
+consumer_key = '3GM5pYdQEQfx_pY9UQTgGcbL3zoa'  
+secretKey = 'rtwtfdq0vDdFLpGO_fCOPE7EhNwa' 
 
+mobileNumber = '+918509936057' 
+login_password = 'Trina124#'  
 def on_message(message):
     print(message)
     
@@ -20,12 +24,15 @@ def on_close(message):
 def on_open(message):
     print(message)
 
-client = NeoAPI(consumer_key="", consumer_secret="", environment='uat', access_token=None, neo_fin_key=None)
+client = NeoAPI(consumer_key=consumer_key, consumer_secret=secretKey,
+               environment='prod', on_message=self.on_message, on_error=self.on_error, on_close=None, on_open=None)
+#client = NeoAPI(consumer_key=consumer_key, consumer_secret=secretKey, environment='uat', access_token=None, neo_fin_key=None)
 
-client.login(mobilenumber="+919999999999", password="XXXX")
+client.login(mobilenumber=mobileNumber, password=login_password)
 
-client.session_2fa(OTP="")
+client.session_2fa(OTP="112233")
 
+print(client.holdings())
 num_points = st.slider("Number of points in spiral", 1, 10000, 1100)
 num_turns = st.slider("Number of turns in spiral", 1, 300, 31)
 
