@@ -24,8 +24,7 @@ def on_close(message):
 def on_open(message):
     print(message)
 
-client = NeoAPI(consumer_key=consumer_key, consumer_secret=secretKey,
-               environment='prod', on_message=on_message, on_error=on_error, on_close=None, on_open=None)
+client = NeoAPI(consumer_key=consumer_key, consumer_secret=secretKey, environment='prod', on_message=on_message, on_error=on_error, on_close=None, on_open=None)
 #client = NeoAPI(consumer_key=consumer_key, consumer_secret=secretKey, environment='uat', access_token=None, neo_fin_key=None)
 
 client.login(mobilenumber=mobileNumber, password=login_password)
