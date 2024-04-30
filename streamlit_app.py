@@ -23,7 +23,7 @@ def on_open(message):
     print(message)
 
 client = NeoAPI(consumer_key=consumer_key, consumer_secret=secretKey, environment='prod')
-
+st.write(client)
 num_points = st.slider("Number of points in spiral", 1, 10000, 1100)
 num_turns = st.slider("Number of turns in spiral", 1, 300, 31)
 
