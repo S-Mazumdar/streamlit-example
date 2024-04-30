@@ -23,11 +23,7 @@ def on_open(message):
     print(message)
 
 client = NeoAPI(consumer_key=consumer_key, consumer_secret=secretKey, environment='prod')
-mobileNumber = '+918509936057'
-login_password = 'Trina124#'
-client.login(mobilenumber=mobileNumber, password=login_password)
-client.session_2fa(OTP="112233")
-#st.write(client.holdings())
+
 num_points = st.slider("Number of points in spiral", 1, 10000, 1100)
 num_turns = st.slider("Number of turns in spiral", 1, 300, 31)
 
