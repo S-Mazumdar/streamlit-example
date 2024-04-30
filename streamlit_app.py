@@ -7,22 +7,6 @@ from neo_api_client import NeoAPI
 # Welcome to Streamlit!
 
 """
-consumer_key = '3GM5pYdQEQfx_pY9UQTgGcbL3zoa'  
-secretKey = 'rtwtfdq0vDdFLpGO_fCOPE7EhNwa' 
-
-def on_message(message):
-    print(message)
-    
-def on_error(error_message):
-    print(error_message)
-
-def on_close(message):
-    print(message)
-    
-def on_open(message):
-    print(message)
-
-client = NeoAPI(consumer_key=consumer_key, consumer_secret=secretKey, environment='prod')
 
 num_points = st.slider("Number of points in spiral", 1, 10000, 1100)
 num_turns = st.slider("Number of turns in spiral", 1, 300, 31)
